@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    
     <title>Digital Library Access</title>
 </head>
 <body>
 
-    <header>
-        <h1>Library Member Login</h1>
-        <p>Enter your credentials to access the digital archives.</p>
-    </header>
-    <hr>
+    <h1>Library Login</h1>
 
     <form>
         <fieldset style="width: 300px;">
-            <legend><b>Security Gateway</b></legend>
-            <br>
-            
-            <label for="uid">Member ID / Username:</label><br>
-            <input type="text" id="uid" name="uid" placeholder="e.g. LIB-9988" required>
+            <legend><b>Login</b></legend>
+
+            Username:<br>
+            <input type="text"
+                   placeholder="LIB-9988"
+                   required
+                   maxlength="10"
+                   pattern="LIB-[0-9]{4}">
             <br><br>
 
-            <label for="p-code">Secret Access Key:</label><br>
-            <input type="password" id="p-code" name="p-code" required>
+            Password:<br>
+            <input type="password"
+                   required
+                   minlength="4"
+                   maxlength="12">
             <br><br>
 
-            <input type="submit" value="Authenticate Login">
+            <input type="submit" value="Login">
+            <input type="reset" value="Cancel">
 
-            <input type="reset" value="Abort & Cancel">
-            
         </fieldset>
     </form>
-
-    <br>
-    
 
 </body>
 </html>
