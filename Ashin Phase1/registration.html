@@ -1,56 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Student Registration</title>
 </head>
 <body>
 
-    <h2>Student Portal: New User Registration</h2>
+    <h2>Student Registration</h2><br><br>
+     <h3>Student Portal: New User Registration</h3>
     <p>Complete the form below to create your campus account.</p>
-    <hr>
+
 
     <form>
-        <fieldset>
-            <legend>Personal Credentials</legend>
-            <br>
-            
-            <label for="stName">Full Name of Student:</label><br>
-            <input type="text" id="stName" name="stName" placeholder="Enter your name..." required>
-            <br><br>
+        Name:<br>
+        <input type="text" required><br><br>
 
-            <label for="stEmail">University Email ID:</label><br>
-            <input type="email" id="stEmail" name="stEmail" placeholder="example@university.edu" required>
-            <br><br>
+        Father Name:<br>
+        <input type="text" required><br>
+        Mother Name:<br>
+        <input type="text" required><br><br>
 
-            <label for="stPass">Create Secure Password:</label><br>
-            <input type="password" id="stPass" name="stPass" required>
-            <br><br>
+        Email:<br>
+        <input type="email" required><br><br>
 
-            <label>Identify Gender:</label><br>
-            <input type="radio" id="m" name="gen" value="male">
-            <label for="m">Male</label>
-            <input type="radio" id="f" name="gen" value="female">
-            <label for="f">Female</label>
-            <input type="radio" id="o" name="gen" value="other">
-            <label for="o">Other</label>
-            <br><br>
+        Password:<br>
+        <input type="password" required><br><br>
 
-            <label>Extracurricular Interests (Hobbies):</label><br>
-            <input type="checkbox" id="code" name="hobbies" value="coding">
-            <label for="code">Coding & Development</label><br>
-            <input type="checkbox" id="game" name="hobbies" value="gaming">
-            <label for="game">Competitive Gaming</label><br>
-            <input type="checkbox" id="read" name="hobbies" value="reading">
-            <label for="read">Technical Research</label>
-            <br><br>
+        Gender:<br>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female
+        <input type="radio" name="gender"> Other<br><br>
 
-            <button type="submit">Save Registration Details</button>
+        Hobbies:<br>
+        <input type="checkbox"> Coding
+        <input type="checkbox"> Gaming
+        <input type="checkbox"> Reading
+        <input type="checkbox"> Traveling<br><br>
 
-        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Clear</button>
     </form>
-
-    <hr>
 
 </body>
 </html>
