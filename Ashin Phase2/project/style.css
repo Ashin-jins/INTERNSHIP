@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f8;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2d3436;
+  padding: 12px 20px;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+.hero {
+  text-align: center;
+  padding: 40px 20px;
+  background: #74b9ff;
+  color: white;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.card {
+  background: white;
+  padding: 20px;
+  flex: 1;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+footer {
+  background: #2d3436;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+.form-box {
+  max-width: 400px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background: #0984e3;
+  color: white;
+  border: none;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+}
+.chumma {
+  color: #0ea016;
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
