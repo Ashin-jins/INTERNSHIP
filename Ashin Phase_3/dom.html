@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Simple DOM Example</title>
+    <title>Simple DOM</title>
 </head>
 <body>
 
-<h1 id="title">Hello</h1>
+    <h1 id="title">Hello</h1>
 
-<p class="box">Item 1</p>
-<p class="box">Item 2</p>
+    <input type="text" id="inp" placeholder="Enter text">
+    <br><br>
 
-<input type="text" id="inp" placeholder="Enter text">
-<br><br>
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeColor()">Change style</button>
+    <button onclick="addText()">Add</button>
+    <button onclick="removeText()">Remove</button>
 
-<button onclick="changeText()">Change Text</button>
-<button onclick="changeStyle()">Change Style</button>
-<button onclick="addElement()">Add</button>
-<button onclick="removeElement()">Remove</button>
+    <div id="box"></div>
 
-<div id="container"></div>
+    <script>
+        function changeText() {
+            let val = document.getElementById("inp").value;
+            document.getElementById("title").innerText = val;
+        }
 
-<script>
-function changeText() {
-    var t = document.getElementById("title");
-    var val = document.getElementById("inp").value;
-    t.innerText = val;
-}
+        function changeColor() {
+            let colors = ["red", "blue", "green", "orange"];
+            let random = Math.floor(Math.random() * colors.length);
+            document.getElementById("title").style.color = colors[random];
+        }
 
-function changeStyle() {
-    var items = document.getElementsByClassName("box");
-    for (var i = 0; i < items.length; i++) {
-        items[i].style.color = "red";
-    }
-}
+        function addText() {
+            let val = document.getElementById("inp").value;
 
-function addElement() {
-    var p = document.createElement("p");
-    p.innerText = "New item";
-    
-    var c = document.querySelector("#container");
-    c.appendChild(p);
-}
+            let p = document.createElement("p");
+            p.innerText = val;
+            p.id = "new";
 
-function removeElement() {
-    var c = document.querySelector("#container");
-    if (c.lastChild) {
-        c.lastChild.remove();
-    }
-}
-</script>
+            document.getElementById("box").appendChild(p);
+        }
+
+        function removeText() {
+            let el = document.getElementById("new");
+            if (el) {
+                el.remove();
+            }
+        }
+    </script>
 
 </body>
 </html>
