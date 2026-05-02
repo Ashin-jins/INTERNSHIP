@@ -1,90 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Design</title>
 </head>
 <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        margin: 0;
-        font-family: Arial;
-        background-color: #f0f8ff;
-    }
-    .navbar {
-        width: 100%;
-        height: 50px;
-        background-color: #6c5ce7;
-        color: white;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .logo {
-        font-size: 22px;
-        font-weight: bold;
-        padding: 20px;
-    }
-    .links a {
-        color: white;
-        text-decoration: none;
-        margin-right: 15px;
-        font-size: 16px;
-    }
-    .main {
-        margin: 20px;
-        background-color: #dfe6e9;
-        text-align: center;
-        padding: 25px;
-        border-radius: 10px;
-    }
-    .cards {
-        display: flex;
-        gap: 12px;
-        padding: 20px;
-        justify-content: center;
-    }
-    .card {
-        background-color: white;
-        border: 2px solid #6c5ce7;
-        padding: 15px;
-        width: 220px;
-        text-align: center;
-        border-radius: 8px;
-    }
-    footer {
-        background-color: #2d3436;
-        color: white;
-        text-align: center;
-        margin-top: auto;
-        padding: 12px;
-    }
-    @media (min-width: 1024px) {
-        .screen-label::before {
-            content: "DESKTOP VIEW";
-        }
-    }
-    @media (min-width: 601px) and (max-width: 1023px) {
-        .screen-label::before {
-            content: "TABLET VIEW";
-        }
-    }
+   body {
+  margin: 0;
+  font-family: Arial;
+}
+.navbar {
+  background: #6c5ce7;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.main {
+  margin: 20px;
+  padding: 20px;
+  background: #dfe6e9;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+  text-align: center;
+  justify-content: center;
+}
+.card {
+  border: 1px solid #6c5ce7;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+}
+footer {
+  background: #2d3436;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+body{
+  font-size: 14px;
+}
+@media (min-width: 601px) {
+  body {
+    font-size: 16px;
+  }
+}
 
-    @media (max-width: 600px) {
-        .cards {
-            flex-direction: column;
-            align-items: center;
-        }
-        .screen-label::before {
-            content: "MOBILE VIEW";
-        }
-    }
+@media (min-width: 1024px) {
+  body {
+    font-size: 18px;
+  }
+}
 </style>
 <body>
-<div class="screen-label" style="text-align:center; font-weight:bold;"></div>
 <div class="navbar">
     <div class="logo">TechZone</div>
     <div class="links">
